@@ -61,6 +61,6 @@ class StoryBrain {
         break;
     }
   }
-}
 
-//TODO: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
+  bool buttonShouldBeVisible() => _storyNumber < 3 ? true : false;
+}
