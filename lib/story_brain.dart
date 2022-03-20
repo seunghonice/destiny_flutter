@@ -41,12 +41,6 @@ class StoryBrain {
   String getChoice2() => _storyData[_storyNumber].choice2;
 
   void nextStory(int choiceNumber) {
-    // the end, restart
-    if (_storyNumber > 2) {
-      _storyNumber = 0;
-      return;
-    }
-
     switch (_storyNumber) {
       case 0:
         _storyNumber = choiceNumber == 1 ? 2 : 1;
@@ -58,6 +52,7 @@ class StoryBrain {
         _storyNumber = choiceNumber == 1 ? 5 : 4;
         break;
       default:
+        _storyNumber = 0;
         break;
     }
   }
