@@ -1,7 +1,7 @@
 class Story {
-  String title;
+  String storyTitle;
   String choice1;
   String choice2;
 
-  Story(this.title, this.choice1, this.choice2);
+  Story({required this.storyTitle, required this.choice1, required this.choice2});
 }
